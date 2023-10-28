@@ -1,6 +1,8 @@
 paused = false;
 paused_surf = -1;
-global.game_over=false;
 lives=3;
-score=0;
-health=100;
+//global.game_over=false;
+//health=100;
+//score=0;
+//global.lives1=3;
+//global.game_over = false;

@@ -23,3 +23,4 @@ if paused == true
     alarm[3]++;
     }
 }
+//show_debug_message(lives);

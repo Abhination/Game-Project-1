@@ -8,13 +8,15 @@
 
 	
 // Check if the player has remaining lives
+lives --;
+health=100;
+
 if (lives > 0) 
 {
-	lives -= 1;
 	//show_debug_message(lives);
     // Restart the room
     room_restart();
-	health=100;
+	
 	//show_debug_message(lives);
 } 
 else 
@@ -23,5 +25,3 @@ else
     // No lives left, set game_over to true
     global.game_over = true;
 }
-
-
