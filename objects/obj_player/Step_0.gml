@@ -2,6 +2,10 @@
 var move_x = 0;
 var move_y = 0;
 
+// Limit player movement within the room boundaries
+x = clamp(x, 0, room_width);
+y = clamp(y, 0, room_height);
+
 // Set movement speed
 var movement_speed = 4; // Adjust as needed
 
@@ -55,7 +59,8 @@ switch (state)
 
     case State.OnBeeHive:
         // On the beeHive: Apply walking controls
-		
+		//image_xscale=0.25;
+		//image_yscale=0.25;
 		instance_destroy(obj_pin);
 		
         if (up_key)

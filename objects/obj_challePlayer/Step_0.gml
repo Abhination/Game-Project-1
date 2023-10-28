@@ -4,13 +4,15 @@ y = clamp(y, 0, room_height - sprite_height);
 
 if (vspeed > 0) 
 {
-    if (instance_place(x, y + vspeed, obj_challeBlock)) 
+    if (instance_place(x, y + vspeed, obj_challeBlock) and instance_place(x + vspeed, y, obj_challeBlock)) 
 	{
+		 
         // There's a collision with obj_block, so stop falling
         vspeed = 0;
         
         // Adjust the player's y position to be just above the ground
         y = floor(y);
+		x = floor(x);
     }
 }
 
@@ -18,13 +20,15 @@ vspeed = min(vspeed, 10);
 
 if (vspeed > 0) 
 {
-    if (instance_place(x, y + vspeed, obj_challeRotater)) 
+    if (instance_place(x, y - vspeed, obj_challeRotater) and instance_place(x - vspeed, y, obj_challeRotater)) 
 	{
+		
         // There's a collision with obj_block, so stop falling
         vspeed = 0;
         
         // Adjust the player's y position to be just above the ground
         y = floor(y);
+		x = floor(x);
     }
 }
 
