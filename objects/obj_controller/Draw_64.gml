@@ -14,7 +14,7 @@ draw_text(16, 64, "Score: " + string(score));
 // Draw remaining lives
 for (var i = 0; i < lives; i++)
 {
-    draw_sprite(spr_life2, 0, startX + i * spacing, 112);
+    draw_sprite(spr_life, 0, startX + i * spacing, 112);
 }
 
 

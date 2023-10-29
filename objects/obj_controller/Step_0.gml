@@ -24,3 +24,4 @@ if paused == true
     }
 }
 //show_debug_message(lives);
+
