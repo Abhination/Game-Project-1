@@ -1,7 +1,10 @@
 // Limit player movement within the room boundaries
 x = clamp(x, 0, room_width - sprite_width);
 y = clamp(y, 0, room_height - sprite_height);
-
+sprite_index=spr_player;
+if (!keyboard_check(vk_anykey)) {
+    sprite_index=spr_playeridle;	
+}
 if (vspeed > 0) 
 {
     if (instance_place(x, y + vspeed, obj_challeBlock) and instance_place(x + vspeed, y, obj_challeBlock)) 
@@ -51,6 +54,8 @@ if keyboard_check(vk_right) {
 // Check if the player is trying to jump
 if keyboard_check_pressed(vk_up) {
     // Check if the player is on the ground or a platform
+	sprite_index=spr_playerjump;
+	//alarm[0]=room_speed*3;
     if (place_meeting(x, y + 1, obj_challeBlock) || place_meeting(x, y + 1, obj_challeRotater)) {
         // Set vspeed to jump_height to apply vertical momentum
         vspeed = jump_height-5;

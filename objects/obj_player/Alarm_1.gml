@@ -1,11 +1,8 @@
-/// @description Insert description here
-// You can write your code in this editor
-if(keyboard_check(ord("A")))
+if (keyboard_check(ord("A"))) 
 {
-	health-=1;
+    health -= 1;
 }
-else
+else 
 {
-	health-=20;
+    health -= 20;
 }
-

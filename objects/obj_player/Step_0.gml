@@ -20,11 +20,10 @@ var a_key = keyboard_check(ord("A"));
 var d_key = keyboard_check(ord("D"));
 
 
-if (!place_meeting(x, y, beeHive))
+if (!place_meeting(x, y, beeHive) and health>0)
 {
-    state = State.Flying; // Automatically switch to flying mode when not on the hive
+	state = State.Flying; // Automatically switch to flying mode when not on the hive
 }
-
 
 switch (state)
 {
@@ -132,5 +131,6 @@ if(!instance_exists(obj_pin))
 
 if(health<=0)
 {
+	sprite_index=spr_playerDie;
 	obj_player.instance_destroy();
 }

@@ -13,9 +13,11 @@ health=100;
 
 if (lives > 0) 
 {
+	 room_restart();
+	 
 	//show_debug_message(lives);
     // Restart the room
-    room_restart();
+   
 	
 	//show_debug_message(lives);
 } 

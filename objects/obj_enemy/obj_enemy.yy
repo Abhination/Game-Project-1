@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Sprite7",
-    "path": "sprites/Sprite7/Sprite7.yy",
+    "name": "spr_spider",
+    "path": "sprites/spr_spider/spr_spider.yy",
   },
   "spriteMaskId": null,
   "visible": true,

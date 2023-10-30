@@ -31,8 +31,8 @@
   ],
   "solid": false,
   "spriteId": {
-    "name": "Sprite6",
-    "path": "sprites/Sprite6/Sprite6.yy",
+    "name": "green",
+    "path": "sprites/green/green.yy",
   },
   "spriteMaskId": null,
   "visible": true,
