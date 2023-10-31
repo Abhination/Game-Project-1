@@ -19,11 +19,12 @@ var contentY = centerY - 30;
 draw_set_font(contentFont);
 var instructionsText = "Instructions:\n";
 instructionsText += "- Use the arrow keys to move.\n";
-instructionsText += "- Press 'Up' Arrow to jump in challenge.\n";
-instructionsText += "- Keep pressing 'A' Arrow to use the sword to attack enemies.\n";
-instructionsText += "- Player wins when Score reaches 5.\n";
-instructionsText += "- While playing the challenge, falling on the red block leads to Score = 0\n";
-instructionsText += "- Collect honey and hover over the bee hive to drop off honey.\n\n";
+instructionsText += "- Press 'Up' arrow to jump in challenge.\n";
+instructionsText += "- Press 'A' key to attack enemies.\n";
+instructionsText += "- Collect honey to gain score.\n";
+instructionsText += "- Player wins when Score reaches 5 and they go back to hive.\n";
+instructionsText += "- While playing the challenge, falling on the red block resets the score\n";
+
 draw_text( contentX, contentY, instructionsText );
 
 // Adjust spacing for cheat codes
@@ -36,11 +37,11 @@ draw_text( centerX, contentY, cheats );
 
 contentY += 40;
 draw_set_font(contentFont);
-var cheatText = "A: When near the sword use this to carry it along with you.\n";
-cheatText += "R: Restart the room\n";
+var cheatText = "R: Restart the room\n";
 cheatText += "Alt + C: Restart the room\n";
 cheatText += "Alt + G: Restart the game\n";
 cheatText += "Alt + L: Increase lives by 5\n";
+cheatText += "Alt + B: Move to the previous room\n";
 cheatText += "Alt + N: Move to the next room\n";
 cheatText += "Alt + 1: Move to Room1\n";
 cheatText += "Alt + 2: Move to Room2\n";

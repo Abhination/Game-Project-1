@@ -1,11 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-/// @description Insert description here
-// You can write your code in this editor
-
-if room == Room1
+if room == Room1 || Room2 || Room3 || room_challenge1
 {
 if keyboard_check_pressed(ord("P"))
     {
@@ -23,5 +19,6 @@ if paused == true
     alarm[3]++;
     }
 }
+
 //show_debug_message(lives);
 

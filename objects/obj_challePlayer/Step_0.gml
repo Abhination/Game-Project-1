@@ -18,9 +18,32 @@ if (vspeed > 0)
 		x = floor(x);
     }
 }
-
-vspeed = min(vspeed, 10);
-
+if (vspeed > 0) 
+{
+    if (instance_place(x, y - vspeed, obj_block) and instance_place(x - vspeed, y, obj_block)) 
+	{
+		
+        // There's a collision with obj_block, so stop falling
+        vspeed = 0;
+        
+        // Adjust the player's y position to be just above the ground
+        y = floor(y);
+		x = floor(x);
+    }
+}
+if (vspeed > 0) 
+{
+    if (instance_place(x, y - vspeed, obj_block2) and instance_place(x - vspeed, y, obj_block2)) 
+	{
+		
+        // There's a collision with obj_block, so stop falling
+        vspeed = 0;
+        
+        // Adjust the player's y position to be just above the ground
+        y = floor(y);
+		x = floor(x);
+    }
+}
 if (vspeed > 0) 
 {
     if (instance_place(x, y - vspeed, obj_challeRotater) and instance_place(x - vspeed, y, obj_challeRotater)) 
@@ -34,10 +57,14 @@ if (vspeed > 0)
 		x = floor(x);
     }
 }
+vspeed = min(vspeed, 10);
+
+
+
 
 // Check for left movement
 if keyboard_check(vk_left) {
-    image_xscale = -0.25; // Flip the sprite horizontally
+    image_xscale = -0.5; // Flip the sprite horizontally
     if !place_meeting(x - move_speed, y, obj_challeRotater) {
         x -= move_speed; // Move to the left if there are no obstacles
     }
@@ -45,7 +72,7 @@ if keyboard_check(vk_left) {
 
 // Check for right movement
 if keyboard_check(vk_right) {
-    image_xscale = 0.25; // Set sprite to its default scale
+    image_xscale = 0.5; // Set sprite to its default scale
     if !place_meeting(x + move_speed, y, obj_challeRotater) {
         x += move_speed; // Move to the right if there are no obstacles
     }
@@ -54,9 +81,9 @@ if keyboard_check(vk_right) {
 // Check if the player is trying to jump
 if keyboard_check_pressed(vk_up) {
     // Check if the player is on the ground or a platform
-	sprite_index=spr_playerjump;
+	//sprite_index=spr_playerjump;
 	//alarm[0]=room_speed*3;
-    if (place_meeting(x, y + 1, obj_challeBlock) || place_meeting(x, y + 1, obj_challeRotater)) {
+    if (place_meeting(x, y + 1, obj_challeBlock) || place_meeting(x, y + 1, obj_challeRotater) || place_meeting(x, y + 1, obj_block) || place_meeting(x, y + 1, obj_block2)) {
         // Set vspeed to jump_height to apply vertical momentum
         vspeed = jump_height-5;
     }

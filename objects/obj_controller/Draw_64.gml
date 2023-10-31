@@ -1,21 +1,22 @@
 // Draw Event of obj_controller
 
 // Calculate the starting X position for life sprites
-var startX = 16;
-var spacing = 72; // Adjust this as needed
+var startX = 32;
+var spacing = 52; // Adjust this as needed
 
 // Draw health bar
-draw_rectangle(16, 16, 16 + health, 32, false);
-draw_text(32 + health, 16, "Health: " + string(health));
+draw_rectangle_colour(15, 16, 117, 33, c_black, c_black, c_black, c_black, true);
+draw_rectangle_colour(16, 16, 16 + health, 32, c_yellow, c_yellow, c_yellow, c_yellow, false);
+draw_text(45, 16, string(health));
 
 // Draw score
 draw_set_color(c_black);
-draw_text(16, 64, "Score: " + string(score));
+draw_text(16, 43, "Score: " + string(score));
 
 // Draw remaining lives
 for (var i = 0; i < lives; i++)
 {
-    draw_sprite(spr_life, 0, startX + i * spacing, 112);
+    draw_sprite(spr_life, 0, startX + i * spacing, 83);
 }
 
 
