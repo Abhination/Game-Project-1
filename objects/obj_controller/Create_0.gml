@@ -9,3 +9,7 @@ health=100;
 //score=0;
 //global.lives1=3;
 //global.game_over = false;
+
+audio_stop_all();
+audio_play_sound(BGM, 1, true);
+global.music_position = 0;

@@ -11,3 +11,8 @@ state = State.Flying;
 
 global.game_over=false;
 //lives = 3;
+
+can_attack=true;
+attack_cooldown=0;
+attack_timer=0;
+invinc_timer=0;

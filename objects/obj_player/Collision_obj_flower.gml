@@ -1,3 +1,3 @@
-// Collision event with beeHive
-state = State.OnBeeHive;
-sprite_index = spr_playerOn;
+// Collision event with flower
+//state = State.OnBeeHive;
+//sprite_index = spr_playerOn;

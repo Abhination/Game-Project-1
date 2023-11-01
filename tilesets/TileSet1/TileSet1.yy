@@ -16,8 +16,8 @@
     "path": "folders/Tile Sets.yy",
   },
   "spriteId": {
-    "name": "Sprite6",
-    "path": "sprites/Sprite6/Sprite6.yy",
+    "name": "spr_block2",
+    "path": "sprites/spr_block2/spr_block2.yy",
   },
   "spriteNoExport": false,
   "textureGroupId": {

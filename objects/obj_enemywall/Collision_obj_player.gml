@@ -1,4 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-room_goto(room_challenge);
+global.music_position = audio_sound_get_track_position(BGM);
+audio_stop_all();
+room_goto(room_challenge1);
